@@ -1,4 +1,4 @@
-@if((config('google-analytics-4-measurement-protocol.measurement_id') === true))
+@if((config('google-analytics-4-measurement-protocol.csp_enable') === true))
 <script @csrf>
 @else
 <script>
