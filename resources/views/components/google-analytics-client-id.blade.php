@@ -1,5 +1,5 @@
 @if((config('google-analytics-4-measurement-protocol.csp_enable') === true))
-<script @csrf>
+<script @cspNonce>
 @else
 <script>
 @endif
