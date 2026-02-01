@@ -5,8 +5,6 @@ return [
 
     'api_secret' => env('MEASUREMENT_PROTOCOL_API_SECRET', null),
 
-    'csp_enable' => true,
-
     'ga4_session_id' => 'google-analytics-4-measurement-protocol.session_id',
 
     'ga4_session_number' => 'google-analytics-4-measurement-protocol.session_number',

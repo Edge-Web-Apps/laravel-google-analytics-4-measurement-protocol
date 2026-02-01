@@ -1,8 +1,4 @@
-@if((config('google-analytics-4-measurement-protocol.csp_enable') === true))
-<script @cspNonce>
-@else
 <script>
-@endif
 function collectClientId() {
     if (typeof ga !== 'undefined') {
         ga(function(tracker) {
