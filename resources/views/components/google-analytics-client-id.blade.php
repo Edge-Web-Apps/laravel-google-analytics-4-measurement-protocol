@@ -1,5 +1,5 @@
 @if((config('google-analytics-4-measurement-protocol.csp_enable') === true))
-<script nonce="{{app('csp-nonce')}}">
+<script @csrf>
 @else
 <script>
 @endif
