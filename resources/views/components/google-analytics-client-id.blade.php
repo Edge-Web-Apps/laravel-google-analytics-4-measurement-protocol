@@ -1,4 +1,8 @@
+@if((config('google-analytics-4-measurement-protocol.measurement_id') === true))
+<script @csrf>
+@else
 <script>
+@endif
 function collectClientId() {
     if (typeof ga !== 'undefined') {
         ga(function(tracker) {
