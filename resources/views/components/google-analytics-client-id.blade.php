@@ -1,4 +1,4 @@
-<script>
+<script {{ $attributes }}>
 function collectClientId() {
     if (typeof ga !== 'undefined') {
         ga(function(tracker) {
