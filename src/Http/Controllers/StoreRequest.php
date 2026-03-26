@@ -4,7 +4,7 @@ namespace Freshbitsweb\LaravelGoogleAnalytics4MeasurementProtocol\Http\Controlle
 
 use App\Sanitizers\SanitizeHtmlPurifier;
 //use ArondeParon\RequestSanitizer\Sanitizers\RemoveNonNumeric;
-use App\Sanitizers\RemoveNonNumeric;
+use App\Sanitizers\RemoveNonNumericWithDecimal;
 use ArondeParon\RequestSanitizer\Traits\SanitizesInputs;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
@@ -18,13 +18,13 @@ class StoreRequest extends FormRequest
 
     protected $sanitizers = [
         'session_id' => [
-            RemoveNonNumeric::class
+            RemoveNonNumericWithDecimal::class
         ],
         'session_number' => [
-            RemoveNonNumeric::class
+            RemoveNonNumericWithDecimal::class
         ],
         'client_id' => [
-            RemoveNonNumeric::class
+            RemoveNonNumericWithDecimal::class
         ],
     ];
 
