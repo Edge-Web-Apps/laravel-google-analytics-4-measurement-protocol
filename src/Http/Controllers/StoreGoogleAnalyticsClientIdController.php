@@ -1,6 +1,7 @@
 <?php
-
 namespace Freshbitsweb\LaravelGoogleAnalytics4MeasurementProtocol\Http\Controllers;
+
+use \Illuminate\Support\Facades\Log;
 
 class StoreGoogleAnalyticsClientIdController
 {
@@ -11,7 +12,7 @@ class StoreGoogleAnalyticsClientIdController
         $sessionNumber = $validated['session_number'] ?? null;
         $clientId = $validated['client_id'] ?? null;
 
-        Illuminate\Support\Facades\Log::info("GA4 Test: ".json_encode($validated));
+        Log::info("GA4 Test: ".json_encode($validated));
 
         session([config('google-analytics-4-measurement-protocol.ga4_session_id') => $sessionId]);
         session([config('google-analytics-4-measurement-protocol.ga4_session_number') => $sessionNumber]);
